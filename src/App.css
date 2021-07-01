@@ -1,38 +1,136 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.title {
+  letter-spacing: 1rem;
 }
+.create-post-container {
+  width: 520px;
+  height: 280px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: #15202b;
+  border: 1px solid #38444d;
+  border-radius: 8px;
+  position: relative;
+}
+.create-post {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 12px;
+}
+.textArea {
+  resize: none;
+  border-style: none;
+  outline: none;
+  font-size: 18px;
+  padding-top: 10px;
+  background-color: #15202b;
+  color: #fff;
+}
+.gifbtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(29, 161, 242, 1);
+  background-color: #15202b;
+
+  border: 2px solid rgba(29, 161, 242, 1);
+  cursor: pointer;
+}
+.gifbtn:disabled {
+  cursor: default;
+
+  color: rgba(29, 161, 242, 0.4);
+  border: 2px solid rgba(29, 161, 242, 0.4);
+}
+.close {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  margin-left: 14px;
+}
+.postbtnContainer {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+.postbtn {
+  width: 70px;
+  height: 40px;
+  margin-top: 5px;
+  background-color: #1da1f2;
+  border-radius: 20px;
+  border-style: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.postbtn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.gif-container {
+  height: 330px;
+  width: 300px;
+  background-color: #15202b;
+  border: 1px solid #38444d;
+  position: relative;
+  left: 102%;
+  top: -85%;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+}
+.gifImg-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.searchGif {
+  width: 80%;
+  height: 30px;
+  background-color: #15202b;
+  border: 1px solid rgba(29, 161, 242, 1);
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+.allPost-container {
+  margin-top: 30px;
+}
+.eachPost {
+  width: 520px;
+  height: 100%;
+  background-color: #15202b;
+  border: 1px solid #38444d;
+  margin-top: 26px;
+  border-radius: 8px;
+  padding: 18px;
+}
+.gifInPost {
+  margin-left: 16px;
+  width: 250px;
+  height: 170px;
+}
+.gifs {
+  border-radius: 10px;
+  height: 150px;
+  width: 100%;
+  margin-top: 20px;
 }

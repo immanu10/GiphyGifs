@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CreatePost from "./components/CreatePost";
+import AllPosts from "./components/AllPosts";
+import "./App.css";
 
 function App() {
+  const [allPost, setallPost] = useState([]);
+  const handlePostChange = (value) => {
+    setallPost(value);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">GiphyGifs</h1>
+      <br />
+      <CreatePost changePost={handlePostChange} post={allPost} />
+      <AllPosts allPost={allPost} />
     </div>
   );
 }
